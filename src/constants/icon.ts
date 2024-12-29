@@ -1,7 +1,7 @@
 import type { Favicon } from '@/types/config.ts'
 
 export const defaultFavicons: Favicon[] = [
-  {
+  /*{
     src: '/favicon/favicon-light-32.png',
     theme: 'light',
     sizes: '32x32',
@@ -40,5 +40,10 @@ export const defaultFavicons: Favicon[] = [
     src: '/favicon/favicon-dark-192.png',
     theme: 'dark',
     sizes: '192x192',
+  },*/
+  {
+    src: '/favicon/nmap-logo.svg',
+    //theme: 'dark',
+    //sizes: '192x192',
   },
 ]
