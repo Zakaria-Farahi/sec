@@ -1,7 +1,7 @@
 # About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+This is Blog site for [Zakaria-Farahi](https://github.com/Zakaria-Farahi).
 
-::github{repo="saicaca/fuwari"}
+::github{repo="Zakaria-Farahi/sec"}
 
 > ### Sources of images used in this site
 > - [Unsplash](https://unsplash.com/)
