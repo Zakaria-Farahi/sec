@@ -236,3 +236,12 @@ C:\>  PSExec64.exe \\10.0.0.25 cmd.exe
 C:\> whoami # another user
 C:\> hostname
 ```
+
+# Additional Active Directory Attacks
+
+- Active Directory vulnerbilities occur all the time
+- Recent major vulnerbilities include :
+    - ZeroLogon
+    - PrintNightmare
+    - Sam the Admin
+- It's worth checking for these vulnerbilities, but you should not attempt to exploit them unless your client approves
