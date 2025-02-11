@@ -8,6 +8,39 @@ category: 'Course'
 draft: false 
 ---
 
+# Active Directory Overview
+
+What is Active Directory?
+- Directory service developed by Microsoft to manage windows domain networks
+- Stores information related to Object, such as computers, Users, Printers, etc.
+    - Think about it as a phone book for Windows
+- Authenticates using Kerberos ticket.
+    - Non-Windows devices, such as Linux machines, Firewalls, etc. can also authenticate to Acitve Directory via RADIUS or LDAP
+
+Why Active Directory?
+- Active Directory is the most commonly used identity management service in the world
+    - 95% of Fortune 1000 companies implement the service in their networks (https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Success-with-Enterprise-Mobility-Identity/ba-
+p/248613)
+- Can be exploited without ever attacking patchable exploits. 
+    - Instead, we abuse features, trusts, components, and more.
+
+## Active Directory Components
+
+Active Directory is composed of both physical and logical components.
+- PHYSICAL
+    - Data store `%SystemRoot%\NTDS`
+    - Domain controllers
+    - Global catalog server 
+    - Read-Only Domain Controller (RODC)
+- LOGICAL
+    - Partitions
+    - Schema : Defines every type of object that can be stored in the directory
+    - Domains
+    - Domain trees
+    - Forests
+    - Sites
+    - Organization units (OUs)
+
 # Attack Active Directory - Post-Compromise Attacks
 - talk about what we can do with the access we have
 
