@@ -1,6 +1,6 @@
 ---
 title: Windows Local Escalation and Enumeration
-published: 2025-02-8
+published: 2025-02-08
 description: ""
 image: "./img/img.jpg"
 tags: [Notes ,AD, windows]

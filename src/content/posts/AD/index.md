@@ -1,6 +1,6 @@
 ---
 title: Active Directory Lab Setup
-published: 2025-02-8
+published: 2025-02-08
 description: "setup ur Active Directory Lab for Attack and Defense"
 image: "./img.jpeg"
 tags: [Lab ,AD, windows]
