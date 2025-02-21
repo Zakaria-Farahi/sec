@@ -1,7 +1,7 @@
 ---
 title: Windows Local Escalation and Enumeration
 published: 2025-02-08
-description: ""
+description: "Commands for enumerating windows"
 image: "./img/img.jpg"
 tags: [Notes ,AD, windows]
 category: 'Notes'
@@ -115,10 +115,10 @@ PS C:\> [Ref].Assembly.GetType('System.Management.Automation.Ams'+'iUtils').GetF
 
 ### Default Writeable Folders
 
-C:\Windows\System32\Microsoft\Crypto\RSA\MachineKeys
-C:\Windows\System32\spool\drivers\color
-C:\Windows\Tasks
-C:\windows\tracing
+- C:\Windows\System32\Microsoft\Crypto\RSA\MachineKeys
+- C:\Windows\System32\spool\drivers\color
+- C:\Windows\Tasks
+- C:\windows\tracing
 
 ## Hunting Passwords
 

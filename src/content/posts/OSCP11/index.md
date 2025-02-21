@@ -1,6 +1,6 @@
 ---
 title: OSCP Windows Privilege Escalation
-published: 2025-01-21
+published: 2025-02-10
 description: 'Windows Privilege Escalation Notes for OSCP'
 image: './img/cover.png'
 tags: [OSCP, Notes, Course]
