@@ -2,7 +2,7 @@
 title: HackTheBox | Titanic
 published: 2025-02-21
 description: "In this writeup, I explain how I gain ownership of Titanic on HackTheBox"
-image: "./img/img.jpg"
+image: "./img/image.jpg"
 tags: [CTF, HTB, write-up]
 category: 'CTF'
 draft: false
