@@ -1,6 +1,6 @@
 ---
 title: HackTheBox | Checker
-published: 2025-02-21
+published: 2025-03-01
 description: "In this write-up, I explain how I gained ownership of Checker on HackTheBox."
 image: "./img/image.png"
 tags: [CTF, HTB, write-up]
