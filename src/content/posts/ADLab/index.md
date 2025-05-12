@@ -23,21 +23,11 @@ Ce rapport documente l'ensemble du processus : configuration de l'environnement,
 
 Nous allons commencer par promouvoir notre serveur Windows en contrôleur de domaine afin de mettre en place une architecture Active Directory.
 
-<figure>
-<img src="Rapport-media/e909e8742797ea043fcafbb0c7197152b1126369.png"
-title="wikilink" alt="Pasted image 20250507093214.png" />
-<figcaption aria-hidden="true">Pasted image
-20250507093214.png</figcaption>
-</figure>
+![ad](Rapport-media/e909e8742797ea043fcafbb0c7197152b1126369.png)
 
 Nous allons configurer le nom de domaine "SaZcorp.ccn", qui signifie Saad à Zakaria Entreprise.
 
-<figure>
-<img src="Rapport-media/ac10407de2fb15e17f1c5441c5e3256b4cb7c9d2.png"
-title="wikilink" alt="Pasted image 20250507093656.png" />
-<figcaption aria-hidden="true">Pasted image
-20250507093656.png</figcaption>
-</figure>
+![ad](Rapport-media/ac10407de2fb15e17f1c5441c5e3256b4cb7c9d2.png)
 
 ## Configuration de partage SMB
 
@@ -58,12 +48,7 @@ Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\LanManServer\Par
 
 Résultats de notre modification
 
-<figure>
-<img src="Rapport-media/62ea0ec07e58395759faac3f5ac41db0339330b3.png"
-title="wikilink" alt="Pasted image 20250508085613.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508085613.png</figcaption>
-</figure>
+![ad](Rapport-media/62ea0ec07e58395759faac3f5ac41db0339330b3.png)
 
 ### **Étape 2 : Créer et partager le dossier « Stagaires » avec un accès anonyme**
 
@@ -81,12 +66,7 @@ New-SmbShare -Name "Stagaires" -Path "C:\Stagaires" -FullAccess "Everyone" -Read
 
 Nous pouvons constater que le dossier a été correctement partagé.
 
-<figure>
-<img src="Rapport-media/8a7faf51d6619456bce01d7e7edaefdfd35ad380.png"
-title="wikilink" alt="Pasted image 20250508085919.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508085919.png</figcaption>
-</figure>
+![ad](Rapport-media/8a7faf51d6619456bce01d7e7edaefdfd35ad380.png)
 
 Nous allons accorder les autorisations de lecture et d'exécution à tout le monde, ainsi qu'au groupe "Anonymous Logon".
 
@@ -97,12 +77,7 @@ icacls "C:\Stagaires" /grant "Anonymous Logon:(OI)(CI)(RX)"  # Explicit anonymou
 
 Résultats
 
-<figure>
-<img src="Rapport-media/2e952c01457787ae8c2639994bfbd1def38787d7.png"
-title="wikilink" alt="Pasted image 20250508085800.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508085800.png</figcaption>
-</figure>
+![ad](Rapport-media/2e952c01457787ae8c2639994bfbd1def38787d7.png)
 
 ## Création des comptes (internes, comptes de service, etc.)
 
@@ -110,39 +85,19 @@ title="wikilink" alt="Pasted image 20250508085800.png" />
 
 Cliquez sur "Nouveau" puis sélectionnez "Utilisateur".
 
-<figure>
-<img src="Rapport-media/740ac4d1c49ffffbf7325cdb11161c6942eb802e.png"
-title="wikilink" alt="Pasted image 20250508090731.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508090731.png</figcaption>
-</figure>
+![ad](Rapport-media/740ac4d1c49ffffbf7325cdb11161c6942eb802e.png)
 
 remplir les informations de l'utilisateurs
 
-<figure>
-<img src="Rapport-media/2dc1de98f811c51fd38c536aa734082342514e5a.png"
-title="wikilink" alt="Pasted image 20250508090801.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508090801.png</figcaption>
-</figure>
+![ad](Rapport-media/2dc1de98f811c51fd38c536aa734082342514e5a.png)
 
 mot de pass j'ai choisi "Summer2025"
 
-<figure>
-<img src="Rapport-media/d1e63963fb14167aa62d6182a6ccf0268157e43b.png"
-title="wikilink" alt="Pasted image 20250508090901.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508090901.png</figcaption>
-</figure>
+![ad](Rapport-media/d1e63963fb14167aa62d6182a6ccf0268157e43b.png)
 
 Résultats
 
-<figure>
-<img src="Rapport-media/3546b88bdf418a689a5e087e2b4492d9dfdc2c8b.png"
-title="wikilink" alt="Pasted image 20250508091046.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508091046.png</figcaption>
-</figure>
+![ad](Rapport-media/3546b88bdf418a689a5e087e2b4492d9dfdc2c8b.png)
 
 ### Creation des employés
 
@@ -164,51 +119,26 @@ New-ADUser -SamAccountName "nour.support" -Name "Nour Support" -AccountPassword 
 
 Résultats
 
-<figure>
-<img src="Rapport-media/e895e6e71d0629cbeb0a4ea8cbdee5b80eac0e56.png"
-title="wikilink" alt="Pasted image 20250508092811.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508092811.png</figcaption>
-</figure>
+![ad](Rapport-media/e895e6e71d0629cbeb0a4ea8cbdee5b80eac0e56.png)
 
 Afin de permettre l'accès à distance via la console, nous avons ajouté l'utilisateur Youssef au groupe "Remote Management Users".
 
-<figure>
-<img src="Rapport-media/7250bc31a411409bf60af7e8ace9fe181ab75520.png"
-title="wikilink" alt="Pasted image 20250508110544.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508110544.png</figcaption>
-</figure>
+![ad](Rapport-media/7250bc31a411409bf60af7e8ace9fe181ab75520.png)
 
 Ici, nous allons simuler une mauvaise utilisation du service où l'utilisateur Youssef se connecte à son compte et tente de modifier son mot de passe. Au lieu de suivre une procédure de changement de mot de passe appropriée, il essaie simplement d'ajouter le caractère "@" à son ancien mot de passe "Summer@2025".
 \## Creation de compte admin
 
 Nous allons copier les mêmes propriétés que celles du compte Administrateur.
 
-<figure>
-<img src="Rapport-media/af8b39a9cd86754641a39722a1f8faf4401d68c2.png"
-title="wikilink" alt="Pasted image 20250508093103.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508093103.png</figcaption>
-</figure>
+![ad](Rapport-media/af8b39a9cd86754641a39722a1f8faf4401d68c2.png)
 
 Remplir notre informations
 
-<figure>
-<img src="Rapport-media/9fd598e13609bab6fe823e500e5fcdc0f6e3b766.png"
-title="wikilink" alt="Pasted image 20250508093130.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508093130.png</figcaption>
-</figure>
+![ad](Rapport-media/9fd598e13609bab6fe823e500e5fcdc0f6e3b766.png)
 
 Résultats
 
-<figure>
-<img src="Rapport-media/cf4196ccc5802063092dd48b688cb449989b9076.png"
-title="wikilink" alt="Pasted image 20250508093159.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508093159.png</figcaption>
-</figure>
+![ad](Rapport-media/cf4196ccc5802063092dd48b688cb449989b9076.png)
 
 ### Créer un compte de service
 
@@ -219,12 +149,7 @@ New-ADUser -Name "Service DB" -SamAccountName "svc_db" -UserPrincipalName "svc_d
 setspn -A MSSQLSvc/DC.SaZcorp.ccn:1433 svc_db
 ```
 
-<figure>
-<img src="Rapport-media/023f3355a87efe7e4bd0d93cd6f2ec0c03b6af95.png"
-title="wikilink" alt="Pasted image 20250508095240.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508095240.png</figcaption>
-</figure>
+![ad](Rapport-media/023f3355a87efe7e4bd0d93cd6f2ec0c03b6af95.png)
 
 ### Configuration des droits d'accès
 
@@ -236,12 +161,7 @@ La commande `dsacls "DC=SaZcorp,DC=ccn" /G "SAZCORP\svc_db:CA;Replicating Direct
 dsacls "DC=SaZcorp,DC=ccn" /G "SAZCORP\svc_db:CA;Replicating Directory Changes" /G "SAZCORP\svc_db:CA;Replicating Directory Changes All"
 ```
 
-<figure>
-<img src="Rapport-media/90503044ac49839ed831f08de5c148347518f58b.png"
-title="wikilink" alt="Pasted image 20250508124631.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508124631.png</figcaption>
-</figure>
+![ad](Rapport-media/90503044ac49839ed831f08de5c148347518f58b.png)
 
 # Phase d'Exploitation
 
@@ -269,12 +189,7 @@ WinRM (Windows Remote Management) est l'implémentation Microsoft du protocole W
 evil-winrm -i 10.8.0.2 -u youssef.intern -p Summer@2025
 ```
 
-<figure>
-<img src="Rapport-media/9f428f6face43712a3313c2e9bd42cce000dae25.png"
-title="wikilink" alt="Pasted image 20250508110642.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508110642.png</figcaption>
-</figure>
+![ad](Rapport-media/9f428f6face43712a3313c2e9bd42cce000dae25.png)
 
 ## Enumération des comptes avec SPN exposés (Kerberoasting)
 
@@ -295,21 +210,11 @@ impacket-GetUserSPNs SaZcorp.ccn/youssef.intern:Summer@2025 -dc-ip 10.8.0.2 -req
 hashcat -m 13100 svc_hash.txt /usr/share/wordlists/rockyou.txt --force
 ```
 
-<figure>
-<img src="Rapport-media/1513a471fcf20851b85131c69f6b55ae27142391.png"
-title="wikilink" alt="Pasted image 20250508130523.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508130523.png</figcaption>
-</figure>
+![ad](Rapport-media/1513a471fcf20851b85131c69f6b55ae27142391.png)
 
 cracker le hachage que nous avons trouvé
 
-<figure>
-<img src="Rapport-media/a6c59f48e287daf526a87c65d40b8c6490a9ed58.png"
-title="wikilink" alt="Pasted image 20250508130726.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508130726.png</figcaption>
-</figure>
+![ad](Rapport-media/a6c59f48e287daf526a87c65d40b8c6490a9ed58.png)
 
 ## Vérification et exploitation des privilèges
 
@@ -319,12 +224,7 @@ BloodHound utilise la théorie des graphes pour révéler les relations cachées
 
 Nous avons commencé par utiliser SharpHound pour collecter des informations sur le domaine. En exécutant SharpHound, nous obtenons un ensemble de données graphiques qui nous aident à visualiser la structure d'Active Directory et à identifier les vulnérabilités potentielles liées aux permissions et aux relations de confiance.
 
-<figure>
-<img src="Rapport-media/8cd03cf939d568f393daa8f719ba03eeef7ac294.png"
-title="wikilink" alt="Pasted image 20250508115859.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508115859.png</figcaption>
-</figure>
+![ad](Rapport-media/8cd03cf939d568f393daa8f719ba03eeef7ac294.png)
 
 Lancez BloodHound et importez les données collectées par SharpHound.
 
@@ -339,21 +239,11 @@ Sélectionnez les données appropriées correspondant à notre cible.
 
 Recherchez notre service cible dans l'interface de BloodHound.
 
-<figure>
-<img src="Rapport-media/2958853c2f48870a2b31a0398ca81ea9a216ce04.png"
-title="wikilink" alt="Pasted image 20250508152806.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508152806.png</figcaption>
-</figure>
+![ad](Rapport-media/2958853c2f48870a2b31a0398ca81ea9a216ce04.png)
 
 Nous pouvons alors observer que notre compte de service possède une permission DCSync sur le contrôleur de domaine.
 
-<figure>
-<img src="Rapport-media/a5393f6a60f58784279923d5ef270a1c7656fd75.png"
-title="wikilink" alt="Pasted image 20250508152836.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508152836.png</figcaption>
-</figure>
+![ad](Rapport-media/a5393f6a60f58784279923d5ef270a1c7656fd75.png)
 
 ## Récupération du hash de l'administrateur (NTLM) via `secretsdump`
 
@@ -362,11 +252,6 @@ Le fichier secretsdump.py d'Impacket exécute diverses techniques pour extraire 
 
 Après avoir récupéré le hash du compte Administrateur, nous pouvons effectuer une attaque Pass-the-Hash, une technique qui permet de s'authentifier sur un système distant en utilisant le hash NTLM ou Kerberos d'un compte au lieu du mot de passe en clair.
 
-<figure>
-<img src="Rapport-media/a64fcb669b9b5d9312ad535d4704283430ce9ab4.png"
-title="wikilink" alt="Pasted image 20250508151814.png" />
-<figcaption aria-hidden="true">Pasted image
-20250508151814.png</figcaption>
-</figure>
+![ad](Rapport-media/a64fcb669b9b5d9312ad535d4704283430ce9ab4.png)
 
 # Détection et Analyse
