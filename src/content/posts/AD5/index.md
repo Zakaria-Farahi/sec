@@ -5,7 +5,7 @@ description: "Commands for enumerating windows"
 image: "./img/img.jpg"
 tags: [Notes ,AD, windows]
 category: 'Notes'
-draft: true
+draft: false
 ---
 
 # DSRM

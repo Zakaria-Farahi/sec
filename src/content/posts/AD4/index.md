@@ -5,7 +5,7 @@ description: "Escalate Your Privilage In the Domain AD Environemant"
 image: "./img/img.jpg"
 tags: [Notes ,AD, windows]
 category: 'Notes'
-draft: true
+draft: false
 ---
 
 # ACL - GenericAll on Group

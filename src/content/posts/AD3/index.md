@@ -5,7 +5,7 @@ description: "Move Laterly in windows AD Enivronement"
 image: "./img/img.jpg"
 tags: [Notes ,AD, windows]
 category: 'Notes'
-draft: true
+draft: false
 ---
 
 # Before u start
