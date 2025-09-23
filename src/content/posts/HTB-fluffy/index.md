@@ -176,10 +176,10 @@ Additionally, `service accounts` had `GenericWrite` rights over several service 
 
 with winrm_svc we can gain access to the machine and get the user flag
 
-what about the CA_SVC account?? from my little experience with htb labs, i know any certificate account is a valuable target we can target and here we can see it's a cert publishers
+what about the CA_SVC account?? from my little experience with htb labs, i know any certificate account is a valuable target, and here we can see it's a cert publishers
 
 ![](Season%208%20-%20Fluffy-6.png)
-## shell to winrm
+# access to winrm_svc
 
 with genericWrite over group I used `bloodyAD` to add `p.agila` into the `service accounts` group:
 ```bash
@@ -217,7 +217,7 @@ From there i can Pth to the account and get the flag
 
 ![](Season%208%20-%20Fluffy-8.png)
 
-## path to root
+# Path to root
 
 going back to cv_svc account let's grap its ntlm
 
