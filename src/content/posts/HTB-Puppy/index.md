@@ -1,8 +1,9 @@
+---
 title: HackTheBox | Puppy | Medium
 published: 2025-09-30
 description: "In this write-up, I explain how I gained ownership of Puppy on HackTheBox."
 image: "./img/image.png"
-tags: [CTF, HTB, write-up]
+tags: [CTF, HTB, write-up, Season8]
 category: 'CTF'
 draft: false
 ---
