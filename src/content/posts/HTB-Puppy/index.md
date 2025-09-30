@@ -10,7 +10,7 @@ draft: false
 ## Summary
 
 This was an Active Directory (AD) machine. I began with an Nmap scan, enumerated LDAP and SMB, collected BloodHound data, abused AD write privileges to gain access to a restricted SMB share, recovered a KeePass database, extracted credentials, used those to access a WinRM session, and finally extracted additional credentials from DPAPI blobs to escalate to the administrator account.
-## Recon — Nmap
+## Recon
 
 I always start with an Nmap scan. Results :
 
