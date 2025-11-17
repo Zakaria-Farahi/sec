@@ -1,15 +1,84 @@
-# 🍥Fuwari
+# 🍥 Fuwari - Customized Blog Template
 
-A static blog template built with [Astro](https://astro.build).
+This is a customized version of [Fuwari](https://github.com/saicaca/fuwari), a static blog template built with [Astro](https://astro.build).
+
+## 🎨 What Makes This Different?
+
+This repository contains:
+- **Personal customizations** applied to the Fuwari theme
+- **Automated script** to apply these customizations to fresh Fuwari clones
+- **Comprehensive documentation** of all changes made
+
+### Key Features
+- ✅ Custom orange/red color scheme
+- ✅ Personalized branding and information
+- ✅ One-command migration script
+- ✅ Detailed customization documentation
+
+## 🚀 Quick Start
+
+Want to apply these customizations to a fresh Fuwari installation?
+
+```bash
+# 1. Clone the latest Fuwari
+git clone https://github.com/saicaca/fuwari.git my-blog
+cd my-blog
+
+# 2. Download and run the customization script
+curl -o apply-customizations.sh https://raw.githubusercontent.com/Zakaria-Farahi/sec/main/apply-customizations.sh
+chmod +x apply-customizations.sh
+./apply-customizations.sh
+
+# 3. Install and run
+pnpm install && pnpm add sharp
+pnpm dev
+```
+
+**See [QUICK-START.md](QUICK-START.md) for detailed instructions.**
+
+## 📚 Documentation
+
+- **[QUICK-START.md](QUICK-START.md)** - Fast setup guide
+- **[CUSTOMIZATIONS.md](CUSTOMIZATIONS.md)** - Complete list of all customizations
+- **[apply-customizations.sh](apply-customizations.sh)** - The automation script
+
+## 🎨 Customizations Overview
+
+### Personal Branding
+- Site title: "No1V4"
+- Profile: Zakaria Farahi
+- Custom social links (LinkedIn, GitHub)
+
+### Color Scheme
+- Primary color: `oklch(0.59 0.23 28.61)` (Orange/Red)
+- High-contrast button colors
+- Custom code block styling
+
+### Configuration
+- Enabled banner
+- Custom deployment URL
+- Optimized settings
+
+## 🔧 The Script
+
+The `apply-customizations.sh` script automatically:
+- ✅ Creates backups before any changes
+- ✅ Updates personal information
+- ✅ Applies custom color scheme
+- ✅ Modifies configuration files
+- ✅ Provides detailed summary
+
+**Safe to run** - creates automatic backups and can be reverted!
+
+---
+
+## 📖 Original Fuwari README
+
+> README version: `2024-09-10`
 
 [**🖥️ Live Demo (Vercel)**](https://fuwari.vercel.app)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
 [**📦 Old Hexo Version**](https://github.com/saicaca/hexo-theme-vivia)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 中文**](https://github.com/saicaca/fuwari/blob/main/README.zh-CN.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 日本語**](https://github.com/saicaca/fuwari/blob/main/README.ja-JP.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 한국어**](https://github.com/saicaca/fuwari/blob/main/README.ko.md)&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
-[**🌏 Español**](https://github.com/saicaca/fuwari/blob/main/README.es.md)
-
-> README version: `2024-09-10`
+[**🌏 Original Repository**](https://github.com/saicaca/fuwari)
 
 ![Preview Image](https://raw.githubusercontent.com/saicaca/resource/main/fuwari/home.png)
 
