@@ -1,9 +1,18 @@
-# About
-This is the demo site for [Fuwari](https://github.com/saicaca/fuwari).
+# About  
+This is the personal blog of [Zakaria Farahi](https://github.com/Zakaria-Farahi), where I share my experiences, CTF write-ups, cybersecurity research, and technical insights.  
 
-::github{repo="saicaca/fuwari"}
+## 🔗 Projects & Contributions  
+Check out my projects on GitHub:  
 
-> ### Sources of images used in this site
-> - [Unsplash](https://unsplash.com/)
-> - [星と少女](https://www.pixiv.net/artworks/108916539) by [Stella](https://www.pixiv.net/users/93273965)
-> - [Rabbit - v1.4 Showcase](https://civitai.com/posts/586908) by [Rabbit_YourMajesty](https://civitai.com/user/Rabbit_YourMajesty)
+::github{repo="Zakaria-Farahi/sec"}
+
+## 🏴 CTF & Cybersecurity Journey  
+I actively participate in Capture The Flag (CTF) competitions, focusing on:  
+- **Pwn, Reverse Engineering, and Cryptography**  
+- **Web Security & Active Directory Attacks**  
+- **OSINT**  
+
+## 📚 Topics Covered  
+🔹 HackTheBox Machines | 🔹 Courses Notes | 🔹 CTF Write-up | 🔹 More  
+
+Stay tuned for more posts on cybersecurity techniques and challenges!  

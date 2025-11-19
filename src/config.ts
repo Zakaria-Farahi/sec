@@ -62,12 +62,12 @@ export const profileConfig: ProfileConfig = {
 			icon: "fa6-brands:linkedin", // Visit https://icones.js.org/ for icon codes
 			// You will need to install the corresponding icon set if it's not already included
 			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://www.linkedin.com/in/zakaria-farahi-b887ba286/",
+			url: "https://www.linkedin.com/in/zakaria-farahi/",
 		},
 		{
-			name: "Steam",
-			icon: "fa6-brands:steam",
-			url: "https://store.steampowered.com",
+			name: "HackTheBox",
+			icon: "local:hackthebox",
+			url: "https://app.hackthebox.com/profile/1665618",
 		},
 		{
 			name: "GitHub",
